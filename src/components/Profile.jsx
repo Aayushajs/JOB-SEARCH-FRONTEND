@@ -46,7 +46,7 @@ const Profile = () => {
                             </Avatar>
                         </motion.div>
                         <div className="flex flex-col">
-                            <h1 className="text-2xl md:text-3xl font-semibold text-gray-800">{user?.fullname}</h1>
+                            <h1 className="relative text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 ">{user?.fullname}</h1>
                             <p className="text-sm md:text-base text-gray-600 mt-2">{user?.profile?.bio || 'No bio available'}</p>
                         </div>
                     </div>

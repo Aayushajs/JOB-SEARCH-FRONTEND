@@ -32,13 +32,13 @@ const Navbar = () => {
 
     return (
         <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
-            <div className="flex items-center justify-between mx-auto max-w-7xl h-16 px-4 lg:px-8">
-                <div className="flex items-center gap-4">
-                    <h1 className="text-3xl font-bold">
-                        JOB<span className="text-[#F83002]"> SEARCH</span>
+            <div className="flex items-center justify-between mx-auto max-w-7xl h-16 px-4 lg:px-8 ">
+                <div className="flex items-center gap-2 ">
+                    <h1 className="relative text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 ">
+                        JOB<span className="font-ligh"> SEARCH</span>
                     </h1>
                     {/* Logo Image */}
-                    <img src="https://cdn.unstop.com/uploads/images/unstop/user-referral/payment-dashboard-icon.png?d=176x177" alt="Company Logo" className="h-16 w-auto" />
+                    <img src="https://cdn.unstop.com/uploads/images/unstop/user-referral/payment-dashboard-icon.png?d=176x177" alt="Company Logo" className="h-16 w-auto " />
                 </div>
                 {/* Hamburger for mobile screens */}
                 <div className="lg:hidden">
@@ -84,9 +84,9 @@ const Navbar = () => {
                                     <AvatarImage src={user?.profile?.profilePhoto} alt={user?.fullname || 'User'} />
                                 </Avatar>
                             </PopoverTrigger>
-                            <PopoverContent className="w-80">
+                            <PopoverContent className="w-80 ">
                                 <div className="p-4">
-                                    <div className="flex gap-4 items-center mb-4">
+                                    <div className="flex gap-4 items-center mb-4 relative text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 ">
                                         <Avatar className="cursor-pointer">
                                             <AvatarImage src={user?.profile?.profilePhoto} alt={user?.fullname || 'User'} />
                                         </Avatar>
@@ -98,16 +98,14 @@ const Navbar = () => {
                                     {/* Avatar content */}
                                     <div className="flex flex-col gap-2">
                                         {user && user.role === 'student' && (
-                                            <div className="flex items-center gap-2 cursor-pointer">
+                                            <div className="flex items-center gap-2 cursor-pointer ">
                                                 <User2 />
-                                                <Button variant="link">
-                                                    <Link to="/profile">View Profile</Link>
-                                                </Button>
                                             </div>
                                         )}
-                                        <div className="flex items-center gap-2 cursor-pointer">
+                                        <Link to="/profile" className="relative text-1xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 ">View Profile</Link>
+                                        <div className="flex items-center gap-2 cursor-pointer ">
                                             <LogOut />
-                                            <Button onClick={logoutHandler} variant="link">Logout</Button>
+                                            <Button onClick={logoutHandler} variant="link">SignOut</Button>
                                         </div>
                                     </div>
                                 </div>
@@ -154,9 +152,9 @@ const Navbar = () => {
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage src={user?.profile?.profilePhoto} alt={user?.fullname || 'User'} />
                                 </Avatar>
-                                <Link to="/profile" className="hover:text-[#F83002]">View Profile</Link>
                             </div>
-                            <Button variant="link" onClick={logoutHandler}>Logout</Button>
+                                <Link to="/profile" className="hover:text-[#F83002]">View Profile</Link>
+                            <Button variant="link" onClick={logoutHandler}>SignOut</Button>
                         </div>
                     )}
                 </div>

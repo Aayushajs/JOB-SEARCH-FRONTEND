@@ -58,7 +58,7 @@ const Login = () => {
     return (
         <div>
             <Navbar />
-            <div className="flex min-h-screen items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="flex min-h-screen items-center justify-center bg-gray-100 py-20 px-4 sm:px-6 lg:px-8">
                 <div className="flex w-full max-w-5xl bg-white rounded-lg shadow-lg overflow-hidden flex-col md:flex-row">
                     {/* Left side with image */}
                     <div className="w-full md:w-1/2 bg-yellow-400 p-6 md:p-10 flex flex-col justify-center items-center">
@@ -78,8 +78,8 @@ const Login = () => {
                     </div>
 
                     {/* Right side with login form */}
-                    <div className="w-full md:w-1/2 p-6 md:p-10">
-                        <h1 className="text-2xl font-bold mb-4">Welcome Back to Job Search!</h1>
+                    <div className="w-full md:w-1/2 p-6 md:p-10 ">
+                        <h1 className="relative text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 ">Welcome Back to Job Search!</h1>
                         <p className="text-sm mb-6">Hi, Candidate! Please login to your account to continue.</p>
 
                         <form onSubmit={submitHandler} className="space-y-4">

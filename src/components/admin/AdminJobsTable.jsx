@@ -108,9 +108,9 @@ const handleDeleteJob = async (jobId) => {
         try {
             const response = await axios.delete(`https://job-search-b2.onrender.com/api/v1/job/delete/${jobId}`);
 
-            if (response.status === 200) {
-                setJobs(jobs.filter(job => job._id !== jobId));
+            if (response) {
                 alert("Job deleted successfully.");
+                
             } else {
                 alert("Failed to delete job.");
             }

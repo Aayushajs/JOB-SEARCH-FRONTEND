@@ -28,7 +28,7 @@ const LatestJobs = () => {
         >
           {allJobs.length <= 0 ? (
             <div className='col-span-3 text-center py-10'>
-              <span className='text-xl text-gray-500'>No Job Available</span>
+              <span className='text-xl text-gray-500'>No Job Available 'First Fall You Can Login'..</span>
             </div>
           ) : (
             allJobs

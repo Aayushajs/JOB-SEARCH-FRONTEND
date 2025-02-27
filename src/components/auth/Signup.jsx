@@ -93,7 +93,7 @@ const Signup = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className='text-2xl font-bold text-center mb-4 text-gray-800'>Create an Account</h1>
+            <h1 className='relative text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 '>Create an Account</h1>
 
             <div className='my-2'>
               <Label>Full Name</Label>

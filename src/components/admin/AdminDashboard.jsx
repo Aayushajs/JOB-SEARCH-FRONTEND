@@ -86,16 +86,8 @@ const AdminCourse = () => {
       <Navbar />
       <div className="p-1 bg-gradient-to-r from-blue-50 to-indigo-100 min-h-screen px-6 h-100 py-4">
         {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          className="absolute inset-0 w-full h-100 object-cover py-16"
-        >
-          <source
-            src="/video.mp4" // Local path to the downloaded video file
-            type="video/mp4"
-          />
-        </video>
+        
+      
 
         <h2 className="text-5xl font-extrabold text-center text-gray-800 mb-10">
           Admin Dashboard

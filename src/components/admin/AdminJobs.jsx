@@ -31,7 +31,7 @@ const AdminJob = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-100 to-gray-200 py-20">
-      <div className='hidden md:block   min-h-10 max-w-7xl mx-auto py-4   md:px-16 grid grid-cols-1 md:grid-cols-3 gap-5 '>
+      <div className='md:block min-h-10 max-w-7xl mx-auto py-4 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-5 '>
                          
                          <img
                             src={"https://d8it4huxumps7.cloudfront.net/uploads/images/656f19b0694de_language_management.png?d=1156x372"}

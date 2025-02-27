@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
 import { Avatar, AvatarImage } from '../ui/avatar';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
@@ -101,21 +102,24 @@ const AdminJobsTable = () => {
 
     }, [allAdminJobs, searchJobByText]);
 
-    // Function to handle job deletion
-    const handleDeleteJob = async (jobId) => {
-        if (window.confirm("Are you sure you want to delete this job?")) {
-            try {
-                // Dispatch action to delete job from the server or use an API call here
-                await dispatch(deleteJob(jobId));
-                // Update the local filterJobs state to reflect the deletion
-                setFilterJobs((prevJobs) => prevJobs.filter(job => job._id !== jobId));
+// Function to delete job using Axios
+const handleDeleteJob = async (jobId) => {
+    if (window.confirm("Are you sure you want to delete this job?")) {
+        try {
+            const response = await axios.delete(`https://job-search-b2.onrender.com/api/v1/job/delete/${jobId}`);
+
+            if (response.status === 200) {
+                setJobs(jobs.filter(job => job._id !== jobId));
                 alert("Job deleted successfully.");
-            } catch (error) {
-                console.error("Error deleting job:", error);
-                alert("Failed to delete job. Please try again.");
+            } else {
+                alert("Failed to delete job.");
             }
-        }
-    };
+        } catch (error) {
+            console.error("Error deleting job:", error);
+            alert("An error occurred while deleting the job.");
+        }                   
+    }
+};
 
     return (
         <div className="bg-gray-100 p-6 rounded-lg shadow-md">

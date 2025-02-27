@@ -69,7 +69,7 @@ const BannerCarousel = () => {
             className="w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110"
             onClick={() => handleButtonClick(banner.link)}
             onError={(e) => {
-              e.target.src = 'https://via.placeholder.com/600x400'; // Fallback image
+              e.target.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxglGb8lyD054JBcJEpXTnXiHBz_yH5PRblIebaZkU08tnEvmMhXTMhPmXFkeODVGPgAA&usqp=CAU'; // Fallback image
             }}
           />
           {/* Gradient Overlay with Text */}

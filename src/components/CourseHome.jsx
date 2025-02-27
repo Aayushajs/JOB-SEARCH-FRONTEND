@@ -9,7 +9,7 @@ const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/v1/courses")
+    axios.get("https://job-search-b2.onrender.com/api/v1/courses",{ withCredentials: true })
       .then(res => setCourses(res.data))
       .catch(err => console.error(err));
   }, []);
